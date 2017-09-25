@@ -46,7 +46,7 @@ public class GetTheStock implements Runnable {
 
         System.out.println(this.price);
 
-        return this.price;
+        return newPrice;
     }
 
     public void updateStockPrice(double newStockPrice){
