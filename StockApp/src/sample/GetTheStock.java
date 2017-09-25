@@ -25,7 +25,7 @@ public class GetTheStock implements Runnable {
         this.stockGrabber = stockGrabber;
         this.stockName = stockName;
         this.price = price;
-        
+
         double newStockPrice = generateRandomPrice();
         this.updateStockPrice(newStockPrice);
         
@@ -42,7 +42,11 @@ public class GetTheStock implements Runnable {
     public double generateRandomPrice(){
         double randNum = (Math.random() * (.1)) - .05;
         DecimalFormat df = new DecimalFormat("#.##");
-        return Double.valueOf(df.format((this.price + randNum)));
+        this.price = Double.valueOf(df.format((this.price + randNum)));
+
+        System.out.println(this.price);
+
+        return this.price;
     }
 
     public void updateStockPrice(double newStockPrice){

@@ -39,20 +39,23 @@ public class StockApp extends Application {
         AAPLObserver aaplObserver = new AAPLObserver(stockGrabber);
         GOOGObserver googObserver = new GOOGObserver(stockGrabber);
 
-        GetTheStock IBMStock = new GetTheStock(stockGrabber, "IBM", 30);
-        GetTheStock AAPLStock = new GetTheStock(stockGrabber, "AAPL", 60);
-        GetTheStock GOOGStock = new GetTheStock(stockGrabber, "GOOG", 50);
+
+
+        GetTheStock IBMStock = new GetTheStock(stockGrabber, "IBM", 30.00);
+        GetTheStock AAPLStock = new GetTheStock(stockGrabber, "AAPL", 60.00);
+        GetTheStock GOOGStock = new GetTheStock(stockGrabber, "GOOG", 50.00);
 
         Thread thread1 = new Thread(IBMStock);
 //        Thread thread2 = new Thread(AAPLStock);
 //        Thread thread3 = new Thread(GOOGStock);
 
+
         thread1.start();
 //        thread2.start();
 //        thread3.start();
 //
-//
-//        System.out.println("Hello World!");
+
+
 
 
 
