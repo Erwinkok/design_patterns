@@ -5,6 +5,7 @@
 
 # IntelliJ
 .idea*/
+/StockApp/.idea*/
 *.iml
 *.iws
 
